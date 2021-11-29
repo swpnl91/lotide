@@ -23,10 +23,54 @@ const eqArrays = function(arr1, arr2) {
   return bool;  //bool is true by default
 };
 
+
+// For objects within objects (sub-objects)
+
+const eqObjects = function(object1, object2) {
+  let arr1 = Object.keys(object1);
+  let arr2 = Object.keys(object2);
+  //let bool = true;
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (const key of arr1) {
+    if (!Array.isArray(object1[key])) {
+      if (!eqObjects(object1[key], object2[key])) {
+        return false;
+      }
+    } else if (Array.isArray(object1[key])) {
+            if (!eqArrays(object1[key], object2[key])) {
+              return false;
+            }
+          } else if (object1[key] !== object2[key]) {
+            return false;    
+          } 
+  }
+   return true;   
+};
+
+
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
+
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
+
+console.log(eqObjects({ a: { x: 3, y: 0, z: 1 }, b: 2 }, { a: { x: 3, y: 0, z: 1 }, b: 2 })); // => true
+
+
+
+
+
+
+
+
+// For objects with arrays 
+
+
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 
-
+/*
 const eqObjects = function(object1, object2) {
   let arr1 = Object.keys(object1);
   let arr2 = Object.keys(object2);
@@ -56,7 +100,7 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, dc), true);
 assertEqual(eqObjects(cd, cd2), false);
 
-
+*/
 
 
 
