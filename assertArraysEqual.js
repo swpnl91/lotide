@@ -5,9 +5,9 @@ const eqArrays = require('./eqArrays');
 const assertArraysEqual = function(actual, expected) {
 
   if (eqArrays(actual, expected)) {
-    console.log("🟢 Assertion Passed");
+    return true; //console.log("🟢 Assertion Passed");
   } else {
-    console.log("🔴 Assertion Failed");
+    return false; //console.log("🔴 Assertion Failed");
   }
 
 };
