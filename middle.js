@@ -1,29 +1,5 @@
-const eqArrays = function(arr1, arr2) {
-  let bool = true;
-  if (arr1.length !== arr2.length) {
-    bool = false; 
-    return bool;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      bool = false;
-      return bool;    // Exits function the moment bool is false 
-    }
-  }
-  return bool;  //bool is true by default
-};
-
-
-// FUNCTION IMPLEMENTATION
-const assertArraysEqual = function(actual, expected) {
-
-  if (eqArrays(actual, expected)) {
-    console.log("🟢 Assertion Passed");
-  } else {
-    console.log("🔴 Assertion Failed");
-  }
-
-};
+const assertArraysEqual = require('./assertArraysEqual');
+const eqArrays = require('./eqArrays');
 
 
 
@@ -45,11 +21,6 @@ const middle = function(arr) {
 
   return midArr;
 
-}
+};
 
-console.log(assertArraysEqual(middle([1]), []));
-console.log(assertArraysEqual(middle([1, 2]), []));
-console.log(assertArraysEqual(middle([1, 2, 3]), [2]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]));
+module.exports = middle;
