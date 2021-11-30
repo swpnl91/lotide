@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+/*const assertEqual = function(actual, expected) {
 
   if (actual === expected) {
     console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
@@ -6,9 +6,9 @@ const assertEqual = function(actual, expected) {
     console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 
-}; 
+}; */
 
-const eqArrays = function(arr1, arr2) {
+/*const eqArrays = function(arr1, arr2) {
   let bool = true;
   if (arr1.length !== arr2.length) {
     bool = false; 
@@ -21,7 +21,7 @@ const eqArrays = function(arr1, arr2) {
     }
   }
   return bool;  //bool is true by default
-};
+};*/
 
 
 // For objects within objects (sub-objects)
@@ -49,15 +49,17 @@ const eqObjects = function(object1, object2) {
    return true;   
 };
 
+module.exports = eqObjects;
 
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
+
+/*console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
 
 console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
 console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
 
 console.log(eqObjects({ a: { x: 3, y: 0, z: 1 }, b: 2 }, { a: { x: 3, y: 0, z: 1 }, b: 2 })); // => true
 
-
+*/
 
 
 

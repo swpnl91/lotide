@@ -1,4 +1,4 @@
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+/*const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 
 const eqArrays = function(arr1, arr2) {
@@ -26,7 +26,7 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`🔴 Assertion Failed: Actual: ${actual}, Expected: ${expected}`);
   }
 
-};
+}; */
 
 const takeUntil = function(array, callback) {
 
@@ -42,6 +42,10 @@ const takeUntil = function(array, callback) {
   return results;
 };
 
+module.exports = takeUntil;
+
+
+/*
 const results1 = takeUntil (data1, element => (element < 0));
 const results2 = takeUntil (data2, element => (element === ','));
 
@@ -50,4 +54,4 @@ const results2 = takeUntil (data2, element => (element === ','));
 
 
 assertArraysEqual ([ 1, 2, 5, 7, 2 ], results1);
-assertArraysEqual ([ 'I\'ve', 'been', 'to', 'Hollywood' ], results2);
+assertArraysEqual ([ 'I\'ve', 'been', 'to', 'Hollywood' ], results2);  */

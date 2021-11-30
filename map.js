@@ -1,5 +1,5 @@
-const words = ["ground", "control", "to", "major", "tom"];
-const words2 = ["Harry", "Ron", "Hermione", "Hagrid", "Tom"];
+//const words = ["ground", "control", "to", "major", "tom"];
+//const words2 = ["Harry", "Ron", "Hermione", "Hagrid", "Tom"];
 
 //const results1 = map (words, word => word[0]);
 //didn't work maybe because the function is supposed to be declared first. Worked if put at the end
@@ -14,10 +14,12 @@ const map = function(array, callback) {
   return results;
 };
 
-const results1 = map (words, word => word[0]); // as it works after you change its position
-const results2 = map (words2, word => word[0]);
+module.exports = map;
 
+//const results1 = map (words, word => word[0]); // as it works after you change its position
+//const results2 = map (words2, word => word[0]);
 
+/*
 const eqArrays = function(arr1, arr2) {
   let bool = true;
   if (arr1.length !== arr2.length) {
@@ -46,4 +48,4 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 assertArraysEqual (['g', 'c', 't', 'm', 't'], results1);
-assertArraysEqual (['H', 'R', 'H', 'H', 'T'], results2);
+assertArraysEqual (['H', 'R', 'H', 'H', 'T'], results2); */

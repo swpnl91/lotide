@@ -1,3 +1,5 @@
+
+/*
 const eqObjects = function(object1, object2) {
   let arr1 = Object.keys(object1);
   let arr2 = Object.keys(object2);
@@ -14,7 +16,7 @@ const eqObjects = function(object1, object2) {
         } 
       }
    return true;   
-};
+};  */
 
 // FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
@@ -26,8 +28,12 @@ const assertObjectsEqual = function(actual, expected) {
     }
 };
 
+module.exports = assertObjectsEqual;
+
+
+/*
 
 let ab = { a: '1', b: 2 };
 let ba = { b: 2, a: '1' };
 
-assertObjectsEqual(ab, ba);
+assertObjectsEqual(ab, ba);   */
