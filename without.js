@@ -1,4 +1,4 @@
-
+/*
 const eqArrays = function(arr1, arr2) {
   let bool = true;
   if (arr1.length !== arr2.length) {
@@ -16,7 +16,7 @@ const eqArrays = function(arr1, arr2) {
 
 
 
-const words = ["hello", "world", "lighthouse"];
+const words = ["hello", "world", "lighthouse"];  */
 
 
 const without = function(arr1, arr2) {
@@ -28,10 +28,13 @@ const without = function(arr1, arr2) {
         ans = ans;
       }
     }
-  console.log(ans);
+  return ans;
 }
 
+module.exports = without;
 
+
+/*
 
 // FUNCTION IMPLEMENTATION
 const assertArraysEqual = function(actual, expected) {
@@ -48,4 +51,4 @@ const assertArraysEqual = function(actual, expected) {
 //without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
  without(words, ["lighthouse"]);// no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
- assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+ assertArraysEqual(words, ["hello", "world", "lighthouse"]);   */
